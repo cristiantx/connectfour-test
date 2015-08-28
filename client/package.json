@@ -1,0 +1,65 @@
+{
+  "name": "bgr-adi-timeline",
+  "version": "0.0.1",
+  "description": "BGR ADI Timeline",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/MAARK/bgr-adi-timeline.git"
+  },
+  "keywords": [
+    "alu",
+    "smb",
+    "catalog",
+    "products"
+  ],
+  "author": "Cristian Conedera",
+  "license": "Copyright",
+  "bugs": {
+    "url": "https://github.com/MAARK/bgr-adi-timeline/issues"
+  },
+  "devDependencies": {
+    "backbone": "~1.1.2",
+    "backbone.base-router": "^1.0.0",
+    "backbone.marionette": "^2.4.1",
+    "backbone.radio": "~0.9.0",
+    "bluebird": "^2.9.24",
+    "bootstrap-sass": "~3.3.2",
+    "browserify": "~8.1.3",
+    "browserify-shim": "~3.8.2",
+    "grunt": "~0.4.5",
+    "grunt-autoprefixer": "~2.2.0",
+    "grunt-browserify": "~3.3.0",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-connect": "~0.9.0",
+    "grunt-contrib-copy": "~0.7.0",
+    "grunt-contrib-uglify": "~0.7.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-exorcise": "^1.0.1",
+    "grunt-filerev": "^2.3.1",
+    "grunt-filerev-apply": "0.0.2",
+    "grunt-filerev-replace": "^0.1.4",
+    "grunt-gh-pages": "~0.10.0",
+    "grunt-open": "~0.2.3",
+    "grunt-sass": "^1.0.0",
+    "jquery": "~2.1.4",
+    "jstify": "~0.7.0",
+    "load-grunt-tasks": "~3.1.0",
+    "node-sass": "^3.2.0",
+    "raphael": "^2.1.4",
+    "time-grunt": "~1.0.0",
+    "underscore": "~1.7.0"
+  },
+  "browser": {
+    "bootstrap": "./node_modules/bootstrap-sass/assets/javascripts/bootstrap.js"
+  },
+  "browserify-shim": "./src/scripts/shims.js",
+  "browserify": {
+    "transform": [
+      "jstify",
+      "browserify-shim"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+dist
+node_modules
+public/scripts/*
+!public/scripts/modules
+public/styles/*.css
+public/styles/*.css.map
+.grunt

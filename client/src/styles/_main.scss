@@ -1,0 +1,44 @@
+.container {
+	padding-top: 60px;
+}
+
+.board-container {
+	background: #efefef;
+	width: $board-width;
+	height: $board-height;
+
+	.board-column {
+		width: $board-width/7;
+		height: $board-height;
+		background: transparent;
+		float: left;
+		cursor: pointer;
+		position: relative;
+		z-index: 100;
+	}
+
+	.board-box {
+		position: relative;
+		width: $board-width;
+		height: $board-height;
+
+		.disc-item {
+			position: absolute;
+			width: ($board-width/7)-10;
+			height: ($board-width/7)-10;
+			background: red;
+			border-radius: ($board-width/7)-10;
+			z-index: 40;
+
+			&.player1 {
+				background-color: #e74c3c;
+			}
+
+			&.player2 {
+				background-color: #2980b9;
+			}
+		}
+	}
+
+
+}

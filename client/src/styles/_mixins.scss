@@ -1,0 +1,56 @@
+@mixin fontFace( $face, $fileName ) {
+	@font-face  {
+		font-family: '#{$face}';
+		src: url("fonts/#{$fileName}.eot");
+		src: url("fonts/#{$fileName}.eot?#iefix") format("embedded-opentype"),
+			 url("fonts/#{$fileName}.woff") format("woff"),
+			 url("fonts/#{$fileName}.ttf") format("truetype"),
+			 url("fonts/#{$fileName}.svg#svgFontName") format("svg");
+		font-weight: normal;
+		font-style: normal;
+	}
+}
+
+
+@mixin responsiveRule($point) {
+	@if $point == default {
+		@media (max-width: 1600px) { @content; }
+	}
+	@else if $point == tablet {
+		@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) { @content; }
+	}
+	@else if $point == mobile {
+		@media (max-width: 768px) { @content; }
+	}
+	@else if $point == small-mobile {
+		@media (max-width: 480px) { @content; }
+	}
+	@else if $point == extra-small-mobile {
+		@media (max-width: 320px) { @content; }
+	}
+}
+
+@mixin legacy-ie($ver: 9) {
+    .ie#{$ver} & {
+        @content;
+    }
+}
+
+@mixin cta() {
+	cursor: pointer; 
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;  
+}
+
+@mixin no-select() {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;  
+}

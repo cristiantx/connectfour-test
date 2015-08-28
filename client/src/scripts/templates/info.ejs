@@ -1,0 +1,11 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h2>Player <strong><%= player.id %></strong></h2>
+	<h3>Status:</h3>
+	<% if( state == 'waiting' ) { %>
+	<p>Waiting for the other player</p>
+	<% } else { %>
+	<p>It's your turn!</p>
+	<% } %>
+  </div>
+</div>
